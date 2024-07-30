@@ -1,0 +1,27 @@
+{:paths
+ ["src"]
+ :deps {mount/mount {:mvn/version "0.1.17"}
+        lilactown/helix {:mvn/version "0.1.9"}
+        applied-science/js-interop {:mvn/version "0.3.3"}
+        nano-id/nano-id {:mvn/version "1.0.0"}
+        metosin/reitit {:mvn/version "0.6.0"}
+        camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.2"}
+        cljstache/cljstache {:mvn/version "2.0.6"}
+        org.clojure/clojurescript {:mvn/version "1.11.60"}}
+
+ :aliases
+ {:dev
+  {:extra-paths ["dev"]
+   :extra-deps
+   {expound/expound {:mvn/version "0.8.9"}
+    nrepl/nrepl {:mvn/version "1.1.0-alpha1"}
+    binaryage/devtools {:mvn/version "1.0.6"}
+    com.taoensso/timbre {:mvn/version "5.1.2"}
+    thheller/shadow-cljs {:mvn/version "2.21.0"}
+    com.google.javascript/closure-compiler-unshaded {:mvn/version "v20230206"}
+    org.clojure/clojure {:mvn/version "1.11.1"}
+    djblue/portal {:mvn/version "0.36.0"}}}
+
+  :test
+  {:extra-deps
+   {thheller/shadow-cljs {:mvn/version "2.21.0"}}}}}

@@ -1,0 +1,30 @@
+{:nrepl {:port 8777}
+
+ :deps {:aliases [:dev]}
+
+ :dev-http
+ {4200 "public"}
+
+ :builds
+ {:app
+  {:target     :browser
+   :output-dir "public/js"
+   :asset-path "/js"
+   :modules
+   {:app {:init-fn gpl.core/init!}}
+   :devtools {:reload-strategy :full
+              :repl-pprint true
+              :preloads [gpl.dev user]}
+   :dev {:compiler-options {:output-feature-set :es7
+                            :closure-defines {gpl.config/sanity-endpoint "https://1y41jyb1.api.sanity.io/v2022-03-07/data/query/production?query="}}}}
+
+  :release
+  {:target     :browser
+   :output-dir "release/js"
+   :asset-path "/js"
+   :modules
+   {:app {:init-fn gpl.core/init!}}
+   :compiler-options {:output-feature-set :es7
+                      :optimizations :advanced
+                      :pretty-print false
+                      :closure-defines {gpl.config/sanity-endpoint "https://1y41jyb1.api.sanity.io/v2022-03-07/data/query/production?query="}}}}}

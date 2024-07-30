@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../fonts/fira/FiraCode-VF.woff2') format('woff2'),
+         url('../fonts/fira/FiraCode-VF.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+.hero-nav-links {
+    color: #131313;
+}
+
+.my-buddy {
+    animation: fadeInBorder 5s ease-in-out forwards;
+    animation-delay: 1s;
+    border-bottom: 2px solid transparent;
+  }
+
+  @keyframes fadeInBorder {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #000;
+    }
+  }
+
+.massive-title {
+    font-size: 24em;
+    font-family: "FiraCode-SemiBold";
+    color: #EAEAEA;
+    opacity: 0;
+    
+    letter-spacing: -0.1em;
+    pointer-events: false;
+}
+
+.flash-text{
+    font-size:20rem;
+    letter-spacing: -1rem;
+    text-align:middle;
+    text-anchor:middle;
+    stroke-width:10px;
+    fill: rgba(243, 118, 29, 0.8);
+  }
+
+.orange-grad {
+    background: linear-gradient(246.25deg, #FFC700 -88.21%, #EE0909 174.55%);
+}
+
+.blue-grad {
+    background: linear-gradient(246.25deg, #4260FC -88.21%, #00FF38 174.55%);
+}
+
+.grey-grad {
+    background: linear-gradient(246.25deg, #222222 -88.21%, #0F0F0F 174.55%);
+}
+
+.purple-grad {
+    background: linear-gradient(246.25deg, #8D43A7 -88.21%, #FC4242 174.55%);
+}
+
+.pink-grad {
+    background: linear-gradient(246.25deg, #dd0ba2 -88.21%, #752941 174.55%);
+}
+
+.playable-text-background {
+    background-color:rgba(231, 64, 97, 0.71);
+}
+
+.section-background {
+    z-index: -1;
+}
+
+.background-video mux-player {
+  --media-object-fit: cover;
+  --media-object-position: center;
+  /* Hide all controls at once */
+  --controls: none;
+
+  /* Hide the error dialog */
+  --dialog: none;
+
+  /* Hide the loading indicator */
+  --loading-indicator: none;
+
+  /* Target all sections by excluding the section prefix */
+  --play-button: none;
+  --live-button: none;
+  --seek-backward-button: none;
+  --seek-forward-button: none;
+  --mute-button: none;
+  --captions-button: none;
+  --airplay-button: none;
+  --pip-button: none;
+  --fullscreen-button: none;
+  --cast-button: none;
+  --playback-rate-button: none;
+  --volume-range: none;
+  --time-range: none;
+  --time-display: none;
+  --duration-display: none;
+
+  /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
+  --center-controls: none;
+  --bottom-play-button: none;
+}
